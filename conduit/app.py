@@ -50,7 +50,7 @@ def register_extensions(app: Flask):
     from conduit.models.secondary import articles_authors, articles_fundings
 
     api.init_app(app)
-    # add register namespaces
+    # register namespaces
     from conduit.api.projects import ns as projects_ns
     from conduit.api.articles import ns as articles_ns
     api.add_namespace(projects_ns, "/projects")
