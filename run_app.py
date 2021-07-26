@@ -1,6 +1,7 @@
+from conduit.app import create_app
+
+
 def main():
-    from conduit.app import create_app
-    
     app = create_app()
     app.run()
 
