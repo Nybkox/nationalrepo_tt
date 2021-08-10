@@ -20,10 +20,11 @@ def create_app(config=None):
     load_dotenv()
 
     if config is None:
-        if os.environ.get("FLASK_ENV").upper() == "DEVELOPMENT":
-            config = DevelopmentConfig
-        else:
+        flask_env = os.environ.get("FLASK_ENV")
+        if flask_env and flask_env. upper() == "PRODUCTION":
             config = ProductionConfig
+        else:
+            config = DevelopmentConfig
 
     app = Flask(__name__)
     app.config.from_object(DevelopmentConfig)
