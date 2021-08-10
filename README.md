@@ -2,6 +2,7 @@
 Solution to the task for the interview. The text of the task can be found in `data/priklad-prijimaci-rizeni-flask.pdf`.
 
 ## Prerequisites
+Alternatively you can use Docker.
 - Python 3.9 or later installed
 - Pipenv installed (recommended)
 
